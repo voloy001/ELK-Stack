@@ -1,0 +1,26 @@
+---
+
+- hosts: webservers
+  become: True
+  tasks:
+
+   - name: Install Filebeats
+     apt:
+      deb: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
+
+   - name: Drop in filebeat.yml
+     copy:
+      src: /etc/ansible/files/filebeat-configuration.yml
+      dest: /etc/filebeat/filebeat.yml
+
+   - name: Enable and Configure System Module
+     command: sudo filebeat modules enable system
+
+   - name: Endpoint Setup
+     command: sudo filebeat setup
+
+   - name: Kill Filebeat Service from previous session if already running
+     command: sudo systemctl stop filebeat
+
+   - name: Start Firebeat Service
+     command: sudo service filebeat start
