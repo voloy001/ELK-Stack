@@ -22,5 +22,5 @@
    - name: Kill Filebeat Service from previous session if already running
      command: sudo systemctl stop filebeat
 
-   - name: Start Firebeat Service
+   - name: Start Filebeat Service
      command: sudo service filebeat start
