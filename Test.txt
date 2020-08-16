@@ -1,0 +1,109 @@
+tomiw@LAPTOP-DAG5VPP5 MINGW64 ~
+$ ssh azadmin@52.188.68.29
+The authenticity of host '52.188.68.29 (52.188.68.29)' can't be established.
+ECDSA key fingerprint is SHA256:9gJl3utq76q5P8VCTRA5A8dpVy3xotqTghnV8DZx1BE.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/c/Users/tomiw/.ssh/known_hosts).
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 5.3.0-1034-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Aug 16 18:21:15 UTC 2020
+
+  System load:  0.03              Processes:           118
+  Usage of /:   7.4% of 28.90GB   Users logged in:     0
+  Memory usage: 34%               IP address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+ * Are you ready for Kubernetes 1.19? It's nearly here! Try RC3 with
+   sudo snap install microk8s --channel=1.19/candidate --classic
+
+   https://microk8s.io/ has docs and details.
+
+12 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Sat Aug 15 23:36:04 2020 from 98.201.125.200
+azadmin@Jump-Box-Provisioner:~$ sudo docker start focused_noyce
+focused_noyce
+azadmin@Jump-Box-Provisioner:~$ sudo docker attach focused_noyce
+root@2a909b9c2c07:~# cd /etc/
+root@2a909b9c2c07:/etc# ls
+adduser.conf            gai.conf      legal          passwd       security
+alternatives            group         libaudit.conf  profile      selinux
+ansible                 group-        login.defs     profile.d    shadow
+apt                     gshadow       logrotate.d    python       shells
+bash.bashrc             gshadow-      lsb-release    python2.7    skel
+bindresvport.blacklist  gss           machine-id     python3      ssh
+ca-certificates         host.conf     mailcap        python3.6    ssl
+ca-certificates.conf    hostname      mailcap.order  rc0.d        subgid
+cron.daily              hosts         mime.types     rc1.d        subuid
+dbus-1                  init.d        mke2fs.conf    rc2.d        sysctl.conf
+debconf.conf            inputrc       mtab           rc3.d        sysctl.d
+debian_version          issue         nanorc         rc4.d        systemd
+default                 issue.net     networks       rc5.d        terminfo
+deluser.conf            kernel        nsswitch.conf  rc6.d        update-motd.d
+dpkg                    ld.so.cache   opt            rcS.d        vim
+environment             ld.so.conf    os-release     resolv.conf
+filebeat                ld.so.conf.d  pam.conf       rmt
+fstab                   ldap          pam.d          securetty
+root@2a909b9c2c07:/etc# cd ansible/
+root@2a909b9c2c07:/etc/ansible# ls
+ansible.cfg  elk.yml  files  hosts  my-playbook.yml  roles
+root@2a909b9c2c07:/etc/ansible# cat hosts
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+## green.example.com
+## blue.example.com
+## 192.168.100.1
+## 192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+
+ [webservers]
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
+10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+
+[elk]
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+## www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+## [dbservers]
+##
+## db01.intranet.mydomain.net
+## db02.intranet.mydomain.net
+## 10.25.1.56
+## 10.25.1.57
+
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+## db-[99:101]-node.example.com
+
+root@2a909b9c2c07:/etc/ansible# nano hosts
+root@2a909b9c2c07:/etc/ansible# nano ansible.cfg
+root@2a909b9c2c07:/etc/ansible# ^C
+root@2a909b9c2c07:/etc/ansible#
