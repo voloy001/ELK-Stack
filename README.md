@@ -69,9 +69,7 @@ The main advantage of automation configuration with ansible is that it allows co
 
 The playbook implements the following tasks:
 -The steps of the ELK installation play:
-- ... 
-- ...
- 
+
 - ...Increase virtual memory
 -	...Install Docker
 -	...Install Pythin3-pip a python package manager
