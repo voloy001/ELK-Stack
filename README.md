@@ -4,7 +4,7 @@ Deployment of containers using Ansible and Docker, Filebeat, and ELK stack on a 
 
 The files in this repository were used to configure the network depicted below.
 
-![Red Team Resource Group and ELK Stack] (github.com/voloy001/ELK-Stack/images/UNIT 13 DIAGRAM (2).jpg) 
+![Red Team Resource Group and ELK Stack] (https://github.com/voloy001/ELK-Stack/blob/master/Images/UNIT%2013%20DIAGRAM%20(2).jpg?raw=true) 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _playbook.yml_ file may be used to install only certain pieces of it, such as Filebeat.
 
