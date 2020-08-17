@@ -32,7 +32,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.  
+- 
 
 
 | Name     | Function        | IP Address | Operating System  |
@@ -72,11 +72,11 @@ The playbook implements the following tasks:
 - ... 
 - ...
  
-•	...Increase virtual memory
-•	...Install Docker
-•	...Install Pythin3-pip a python package manager
-•	...Install a Docker python module
-•	...Download and Enable to the docker
+- ...Increase virtual memory
+-	...Install Docker
+-	...Install Pythin3-pip a python package manager
+- ...Install a Docker python module
+-	...Download and Enable to the docker
 
  
 
@@ -85,7 +85,7 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
  
-![Docker PS] https://github.com/voloy001/ELK-Stack/blob/master/Screenshots/sudodockerps.JPG)
+![Docker PS](https://github.com/voloy001/ELK-Stack/blob/master/Screenshots/sudodockerps.JPG?raw=true)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
