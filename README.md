@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _playbook.yml_ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._ elk.yml
+  - _elk.yml_
 
 This document contains the following details:
 - Description of the Topology
@@ -23,13 +23,13 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available _____, in addition to restricting Access into_____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ Load balancers protect data and virtual machine availability, therefore mitigating the risk of a DDoS attack. It protects all machines from a high influx of traffic at once that could potentially take down the machines. The advantage of a jumpbox is that it is a pivot server. Meaning you can pivot to other servers. It provides an added layer of security to the network. It also provides administrative security.
+Load balancing ensures that the application will be highly _available_, in addition to restricting _Access into_ to the network.
+- _Load balancers protect data and virtual machine availability, therefore mitigating the risk of a DDoS attack. It protects all machines from a high influx of traffic at once that could potentially take down the machines. The advantage of a jumpbox is that it is a pivot server. Meaning you can pivot to other servers. It provides an added layer of security to the network. It also provides administrative security._
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system logs.
 
-- _TODO: What does Filebeat watch for? _System Logs
-- _TODO: What does Metricbeat record?_
+-  _Filebeat watches for _System Logs_
+
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.  
@@ -49,7 +49,7 @@ The machines on the internal network are not exposed to the public Internet.
 Only the jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 98.210.215.230 My Home IP Address
 
-Machines within the network can only be accessed by Jump-Box-Provisioner with Ansible + Docker____.
+Machines within the network can only be accessed by _Jump-Box-Provisioner with Ansible + Docker_.
 
 The Jump Box Provisioner Machine is allowed access to the Elk VM with Private IP 10.0.0.4
 
@@ -72,11 +72,11 @@ The playbook implements the following tasks:
 - ... 
 - ...
  
-•	Increase virtual memory
-•	Install Docker
-•	Install Pythin3-pip a python package manager
-•	Install a Docker python module
-•	Download and Enable to the docker
+•	...Increase virtual memory
+•	...Install Docker
+•	...Install Pythin3-pip a python package manager
+•	...Install a Docker python module
+•	...Download and Enable to the docker
 
  
 
