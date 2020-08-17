@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Red Team Resource Group and ELK Stack] (github.com/voloy001/ELK-Stack/images/UNIT 13 DIAGRAM (2).jpg) 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _playbook.yml____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _playbook.yml_ file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._ elk.yml
 
@@ -117,14 +117,14 @@ _TODO: Answer the following questions to fill in the blanks:_
 http://[elk.ip]:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-ssh azadmin@JumpboxPublicIP
-Ssh key-gen
+- ssh azadmin@JumpboxPublicIP
+- Ssh key-gen
 -curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-configuration.yml
-Sudo su
-Docker start focused_noyce
-Docker attach focused_noyce
-Nano filebeat-configuration.yml
-Nano elk.yml
-Nano filebeat.yml
-Ansible-playbook install-elk.yml
-Ansible-playbook filebeat.yml
+- Sudo su
+- Docker start focused_noyce
+- Docker attach focused_noyce
+- Nano filebeat-configuration.yml
+- Nano elk.yml
+- Nano filebeat.yml
+- Ansible-playbook install-elk.yml
+- Ansible-playbook filebeat.yml
